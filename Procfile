@@ -1,0 +1,1 @@
+web: gunicorn - upr_to_stopnet.wsgi --log-file -
