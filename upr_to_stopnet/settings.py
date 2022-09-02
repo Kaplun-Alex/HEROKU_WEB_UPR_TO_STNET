@@ -12,7 +12,13 @@ IS_HEROKU = "DYNO" in os.environ
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hroy#p%+9(wp6ppgosrkm*14apuv(wl8c%d%@oamoetqbgjhj_'
+
+SECRET_KEY = "CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be used, if set, instead)."
+
+if 'SECRET_KEY' in os.environ:
+    SECRET_KEY = os.environ["SECRET_KEY"]
+
+#SECRET_KEY = 'django-insecure-hroy#p%+9(wp6ppgosrkm*14apuv(wl8c%d%@oamoetqbgjhj_'
 
 if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
