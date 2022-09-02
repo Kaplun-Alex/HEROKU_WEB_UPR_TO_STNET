@@ -1,1 +1,1 @@
-web: gunicorn upr_to_stopnet.wsgi
+web: gunicorn upr_to_stopnet.wsgi.application
